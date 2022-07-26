@@ -1,0 +1,14 @@
+$primaryColor: #2a2f3c;
+$textColor: rgb(235, 235, 235);
+
+@mixin flex ($position, $justify, $align) {
+  display: flex;
+  flex-direction: $position;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin text ($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
