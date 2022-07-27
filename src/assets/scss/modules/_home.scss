@@ -9,6 +9,7 @@
 
   &-text {
     @include text(110%, 400);
+
     width: 100%;
     background-color: $primaryColor;
     color: $textColor;
