@@ -5,17 +5,18 @@ const apiUrl = 'https://www.amiiboapi.com/api';
 const amiiboData = (object) => {
   let amiibos = {};
 
-  object.forEach((item) => {
+  object.slice(0, 20).forEach((item) => {
     amiibos = {
       ...amiibos,
       [item.tail]:
       {
-        series: item.amiiboSeries,
+        series: item.amiiboSeries || null,
         character: item.character,
         game: item.gameSeries,
         image: item.image,
         name: item.name,
         type: item.type,
+        id: item.tail,
       },
     };
   });

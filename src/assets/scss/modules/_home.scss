@@ -3,6 +3,9 @@
 .header {
   @include flex (column, center, center);
 
+  background-color: $primaryColor;
+  padding-bottom: 1rem;
+
   &-image {
     width: 100%;
   }
@@ -11,9 +14,20 @@
     @include text(110%, 400);
 
     width: 100%;
-    background-color: $primaryColor;
     color: $textColor;
     padding: 1rem;
     text-align: center;
+  }
+
+  &-filter {
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.1rem 0;
+  }
+
+  &-amiibocontainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
 }
