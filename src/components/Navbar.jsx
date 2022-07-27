@@ -1,13 +1,11 @@
-import { BiSearchAlt } from 'react-icons/fa';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 const Navbar = () => (
-  <nav>
-    <ul className="header">
-      <li><h2>Search by Category</h2></li>
-      <li className="header-search">
-        <h2>
-          <BiSearchAlt />
-        </h2>
+  <nav className="navbar">
+    <ul className="navbar-searchbar">
+      <li><h2>Search</h2></li>
+      <li>
+        <AiOutlineSearch className="navbar-searchbar__icon" />
       </li>
     </ul>
   </nav>

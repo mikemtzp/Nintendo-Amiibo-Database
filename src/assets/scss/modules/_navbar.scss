@@ -1,0 +1,17 @@
+@import './mixins';
+
+.navbar {
+  background-color: $primaryColor;
+  color: $textColor;
+  padding: 0.5rem 0;
+
+  &-searchbar {
+    @include flex (row, center, center);
+
+    gap: 0.5rem;
+
+    &__icon {
+      font-size: 1.5rem;
+    }
+  }
+}
