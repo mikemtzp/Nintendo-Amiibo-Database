@@ -1,0 +1,29 @@
+@import './mixins';
+
+.amiibo {
+  @include flex(column, center, center);
+
+  border: 1px solid $primaryColor;
+  padding: 0.5rem 0;
+
+  &-image {
+    float: left;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  &-name {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  &-details {
+    background-color: $primaryColor;
+    color: $textColor;
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+  }
+}
