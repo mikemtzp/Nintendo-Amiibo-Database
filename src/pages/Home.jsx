@@ -38,11 +38,8 @@ const Home = () => {
   };
 
   useEffect(() => {
-    seriesSelector();
-  }, []);
-
-  useEffect(() => {
     setAmiibosFiltered(amiibos);
+    seriesSelector();
   }, [amiibos]);
 
   return (
@@ -50,18 +47,16 @@ const Home = () => {
       <div className="header">
         <img src={logo} alt="All amiibos" className="header-image" />
         <p className="header-text">
-          Welcome! Select a category to filter with the searchbar
-          above and see all the information available about any Amiibo!
+          Welcome! Select a category to filter with the search bar
+          below and see all the information available about any amiibo!
         </p>
         <select className="header-filter" onChange={filterAmiibos}>
           <option value="all">All Game Series</option>
-          {
-            Object.keys(gameSeries).map((serie) => (
-              <option value={serie} key={serie} className="header-filter__series">
-                {serie}
-              </option>
-            ))
-          }
+          {Object.keys(gameSeries).map((serie) => (
+            <option value={serie} key={serie} className="header-filter__series">
+              {serie}
+            </option>
+          ))}
         </select>
       </div>
       <ul className="header-amiibocontainer">

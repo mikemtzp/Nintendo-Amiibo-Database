@@ -3,12 +3,21 @@
 .details {
   @include flex(column, center, center);
 
+  &-goback {
+    margin-top: 1rem;
+    cursor: pointer;
+
+    &__text {
+      display: flex;
+    }
+  }
+
   &-container {
   @include flex(column, center, center);
   width: 75%;
   border: 5px solid $primaryColor;
   border-radius: 10px;
-  margin: 2rem 0;
+  margin: 1rem 0;
 
   &__image {
     float: left;

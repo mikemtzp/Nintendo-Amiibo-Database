@@ -5,7 +5,7 @@ const Amiibo = (props) => {
   const { name, image, id } = props;
 
   return (
-    <div className="amiibo">
+    <div className="amiibo" id={id}>
       <img src={image} alt={name} className="amiibo-image" />
       <h2 className="amiibo-name">{name}</h2>
       <Link to={`/details/${id}`}>
