@@ -1,0 +1,39 @@
+@import './mixins';
+
+.details {
+  @include flex(column, center, center);
+
+  &-container {
+  @include flex(column, center, center);
+  width: 75%;
+  border: 5px solid $primaryColor;
+  border-radius: 10px;
+  margin: 2rem 0;
+
+  &__image {
+    float: left;
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    }
+
+  &__ul {
+    @include flex(column, center, center);
+    width: 101%;
+    border-radius: 2px;
+  }
+
+  &__ul:nth-child(even) {
+    font-size: 1rem;
+    text-align: center;
+    background-color: $primaryColor;
+    color: $textColor;
+    }  
+
+  &__ul:nth-child(odd) {
+    font-size: 1rem;
+    text-align: center;
+    background-color: #fff;
+    }
+  }
+}

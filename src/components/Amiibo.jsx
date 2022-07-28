@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 const Amiibo = (props) => {
   const { name, image, id } = props;
 
-  // let { id } = useParams();
-
   return (
     <div className="amiibo">
       <img src={image} alt={name} className="amiibo-image" />
