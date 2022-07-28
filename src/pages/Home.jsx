@@ -57,7 +57,7 @@ const Home = () => {
           <option value="all">All Game Series</option>
           {
             Object.keys(gameSeries).map((serie) => (
-              <option value={serie} key={serie}>
+              <option value={serie} key={serie} className="header-filter__series">
                 {serie}
               </option>
             ))
