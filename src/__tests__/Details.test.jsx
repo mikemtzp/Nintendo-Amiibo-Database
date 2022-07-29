@@ -1,26 +1,22 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  render, screen, fireEvent, waitFor,
+} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../redux/configStore';
-import Details from '../components/Details';
-import Navbar from '../components/Navbar';
-import Home from '../pages/Home';
+import App from '../App';
 
-it('Renders Detail page with proper data', () => {
+it('Renders Detail page with proper data', async () => {
   render(
     <Provider store={store}>
-      <Router initialEntries={['/details/00000002']}>
-        <Navbar />
-        <Routes>
-          <Route path="/details/:id" element={<Details />} />
-          <Route index element={<Home />} />
-        </Routes>
-      </Router>
+      <App />
     </Provider>,
   );
 
-  const backButton = document.querySelector('.details-goback__text');
-  fireEvent.click(backButton);
-  expect(screen.getByAltText(/All amiibos/i)).toBeInTheDocument();
+  waitFor(() => {
+    const seeDetails = screen.getByTestId('00000002');
+    fireEvent.click(seeDetails);
+    const text = screen.findByAltText(/Mario/i);
+    expect(text).toBeInTheDocument();
+  });
 });

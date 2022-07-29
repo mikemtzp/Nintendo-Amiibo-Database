@@ -9,7 +9,7 @@ const Amiibo = (props) => {
       <img src={image} alt={name} className="amiibo-image" />
       <h2 className="amiibo-name">{name}</h2>
       <Link to={`/details/${id}`}>
-        <p className="amiibo-details">See details</p>
+        <p className="amiibo-details" data-testid={id}>See details</p>
       </Link>
     </div>
 

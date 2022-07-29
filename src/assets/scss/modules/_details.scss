@@ -15,34 +15,33 @@
   &-container {
   @include flex(column, center, center);
   width: 75%;
-  border: 5px solid $primaryColor;
+  border: 5px solid #121212;
   border-radius: 10px;
   margin: 1rem 0;
+  background-color: $primaryColor;
 
   &__image {
     float: left;
     width: 150px;
     height: 200px;
     object-fit: contain;
+    padding: 0.5rem 0;
     }
 
   &__ul {
     @include flex(column, center, center);
     width: 101%;
     border-radius: 2px;
-  }
-
-  &__ul:nth-child(even) {
     font-size: 1rem;
     text-align: center;
     background-color: $primaryColor;
     color: $textColor;
-    }  
 
-  &__ul:nth-child(odd) {
-    font-size: 1rem;
-    text-align: center;
-    background-color: #fff;
+    & li:nth-child(odd) {
+      width: 100%;
+      background-color: #fff;
+      color: #121212;
+      }
     }
   }
 }
