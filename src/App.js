@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import getAmiibos from './redux/api';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Details from './components/Details';
 import './assets/scss/App.scss';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
+        <Route path="/details/:id" element={<Details />} />
         <Route index element={<Home />} />
       </Routes>
     </BrowserRouter>

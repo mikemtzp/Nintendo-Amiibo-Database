@@ -9,18 +9,6 @@ const initialState = {
 const amiibos = createSlice({
   name: 'amiibos',
   initialState,
-  reducers: {
-    updateAmiibo: (state, action) => ({
-      ...state,
-      amiibos: {
-        ...state.amiibos,
-        [action.payload]: {
-          ...state.amiibos[action.payload],
-          reserved: !state.amiibos[action.payload].reserved,
-        },
-      },
-    }),
-  },
   extraReducers: {
     [getAmiibos.pending]: (state) => ({
       ...state,

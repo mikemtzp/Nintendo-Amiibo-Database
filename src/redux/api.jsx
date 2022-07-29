@@ -1,11 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const apiUrl = 'https://www.amiiboapi.com/api';
+export const apiUrl = 'https://www.amiiboapi.com/api';
 
 const amiiboData = (object) => {
   let amiibos = {};
 
-  object.slice(0, 20).forEach((item) => {
+  object.slice(0, 100).forEach((item) => {
     amiibos = {
       ...amiibos,
       [item.tail]:
