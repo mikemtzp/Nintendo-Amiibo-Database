@@ -1,5 +1,5 @@
-# Space Travelers' Hub
-> The Air Quality Forecast App displays a Home page with a list of countries which you can select to see their historical air pollution data. All data is retrieved from the [Air Pollution API](https://openweathermap.org/api/air-pollution). Built with React.js and Redux.
+# Nintendo's Amiibo Database
+> Nintendo's Amiibo Database App displays a Home page with a list of amiibos that you can filter by game series and then click to see their details.  All data is retrieved from the [Amiibo API](https://amiiboapi.com/). Built with React.js and Redux.
 
 ## 🛠️ Built With
 
@@ -9,9 +9,9 @@
 - Testing Library
 - Linters: Stylelint & ESlint
 
-## 💻 [Live demo]()
+## 💻 [Live demo](https://amiibo-database.netlify.app/)
 
-## 📹 [Video documentation]()
+## 📹 [Video documentation](https://www.loom.com/share/c0a74ee73b0f428f8bda556d27fa4cbc)
 
 ## 🧮 Prerequisites
 
@@ -49,7 +49,7 @@ Run 'npm run build' to build the code after editing it.
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/mikemtzp/air-quality-forecast/issues).
+Feel free to check the [issues page](https://github.com/mikemtzp/Nintendo-Amiibo-Database/issues).
 
 ## ⭐️ Show your support
 
@@ -62,4 +62,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-[MIT License](https://github.com/mikemtzp/air-quality-forecast/blob/dev/LICENSE)
+[MIT License](https://github.com/mikemtzp/Nintendo-Amiibo-Database/blob/dev/LICENSE)
